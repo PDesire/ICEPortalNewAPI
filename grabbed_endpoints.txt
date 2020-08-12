@@ -1,0 +1,4817 @@
+ICEPortal New Reverse Engineering
+
+
+Endpoint: /status
+
+curl 'https://iceportal.de/api1/rs/status' \
+-X 'GET' \
+-H 'Accept: application/json, text/plain, */*' \
+-H 'Content-Type: application/json' \
+-H 'Cookie: travelPlannerGuide-optout=true; gpv_ln=0%25; gpv_pn=startseite; gvo_v25=Direct; s_cc=true; s_fid=6A56BE3CE3E105FF-05699FF6BE9ADBAA; dbsession=cbc6a4ed.5ac615223ec8f' \
+-H 'Accept-Encoding: gzip, deflate, br' \
+-H 'Host: iceportal.de' \
+-H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15' \
+-H 'Referer: https://iceportal.de/' \
+-H 'Accept-Language: de-de' \
+-H 'Connection: keep-alive'
+
+{
+    "connection": true,
+    "servicelevel": "AVAILABLE_SERVICE",
+    "internet": "HIGH",
+    "speed": 187,
+    "gpsStatus": "VALID",
+    "tzn": "Tz9014",
+    "series": "412",
+    "latitude": 49.724385166666664,
+    "longitude": 8.486326166666666,
+    "serverTime": 1596908891751,
+    "wagonClass": "SECOND",
+    "navigationChange": "2020-08-08-03-18-20",
+    "trainType": "ICE"
+}
+
+
+Endpoint: /trip
+
+curl 'https://iceportal.de/api1/rs/tripInfo/trip' \
+-X 'GET' \
+-H 'Accept: application/json, text/plain, */*' \
+-H 'Content-Type: application/json' \
+-H 'Cookie: travelPlannerGuide-optout=true; gpv_ln=0%25; gpv_pn=startseite; gvo_v25=Direct; s_cc=true; s_fid=6A56BE3CE3E105FF-05699FF6BE9ADBAA; dbsession=cbc6a4ed.5ac615223ec8f' \
+-H 'Accept-Encoding: gzip, deflate, br' \
+-H 'Host: iceportal.de' \
+-H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15' \
+-H 'Referer: https://iceportal.de/' \
+-H 'Accept-Language: de-de' \
+-H 'Connection: keep-alive'
+
+
+{
+    "trip": {
+        "tripDate": "2020-08-08",
+        "trainType": "ICE",
+        "vzn": "592",
+        "actualPosition": 290625,
+        "distanceFromLastStop": 26974,
+        "totalDistance": 683264,
+        "stopInfo": {
+            "scheduledNext": "8000105_00",
+            "actualNext": "8000105_00",
+            "actualLast": "8000244_00",
+            "actualLastStarted": "8000105",
+            "finalStationName": "Leipzig Hbf",
+            "finalStationEvaNr": "8010205_00"
+        },
+        "stops": [
+            {
+                "station": {
+                    "evaNr": "8000261_00",
+                    "name": "München Hbf",
+                    "code": null,
+                    "geocoordinates": {
+                        "latitude": 48.140232,
+                        "longitude": 11.558335
+                    }
+                },
+                "timetable": {
+                    "scheduledArrivalTime": null,
+                    "actualArrivalTime": null,
+                    "showActualArrivalTime": null,
+                    "arrivalDelay": "",
+                    "scheduledDepartureTime": 1596894420000,
+                    "actualDepartureTime": 1596894840000,
+                    "showActualDepartureTime": true,
+                    "departureDelay": "+7"
+                },
+                "track": {
+                    "scheduled": "14",
+                    "actual": "14"
+                },
+                "info": {
+                    "status": 0,
+                    "passed": true,
+                    "positionStatus": "passed",
+                    "distance": 0,
+                    "distanceFromStart": 0
+                },
+                "delayReasons": null
+            },
+            {
+                "station": {
+                    "evaNr": "8000013_00",
+                    "name": "Augsburg Hbf",
+                    "code": null,
+                    "geocoordinates": {
+                        "latitude": 48.365441,
+                        "longitude": 10.88557
+                    }
+                },
+                "timetable": {
+                    "scheduledArrivalTime": 1596896100000,
+                    "actualArrivalTime": 1596896280000,
+                    "showActualArrivalTime": true,
+                    "arrivalDelay": "+3",
+                    "scheduledDepartureTime": 1596896220000,
+                    "actualDepartureTime": 1596896400000,
+                    "showActualDepartureTime": true,
+                    "departureDelay": "+3"
+                },
+                "track": {
+                    "scheduled": "1",
+                    "actual": "1"
+                },
+                "info": {
+                    "status": 0,
+                    "passed": true,
+                    "positionStatus": "passed",
+                    "distance": 55767,
+                    "distanceFromStart": 55767
+                },
+                "delayReasons": null
+            },
+            {
+                "station": {
+                    "evaNr": "8000139_00",
+                    "name": "Günzburg",
+                    "code": null,
+                    "geocoordinates": {
+                        "latitude": 48.460563,
+                        "longitude": 10.279262
+                    }
+                },
+                "timetable": {
+                    "scheduledArrivalTime": 1596897960000,
+                    "actualArrivalTime": 1596898020000,
+                    "showActualArrivalTime": true,
+                    "arrivalDelay": "+1",
+                    "scheduledDepartureTime": 1596898080000,
+                    "actualDepartureTime": 1596898140000,
+                    "showActualDepartureTime": true,
+                    "departureDelay": "+1"
+                },
+                "track": {
+                    "scheduled": "3",
+                    "actual": "3"
+                },
+                "info": {
+                    "status": 0,
+                    "passed": true,
+                    "positionStatus": "passed",
+                    "distance": 45995,
+                    "distanceFromStart": 101762
+                },
+                "delayReasons": null
+            },
+            {
+                "station": {
+                    "evaNr": "8000170_00",
+                    "name": "Ulm Hbf",
+                    "code": null,
+                    "geocoordinates": {
+                        "latitude": 48.399437,
+                        "longitude": 9.982227
+                    }
+                },
+                "timetable": {
+                    "scheduledArrivalTime": 1596898860000,
+                    "actualArrivalTime": 1596898860000,
+                    "showActualArrivalTime": true,
+                    "arrivalDelay": "",
+                    "scheduledDepartureTime": 1596898980000,
+                    "actualDepartureTime": 1596898980000,
+                    "showActualDepartureTime": true,
+                    "departureDelay": ""
+                },
+                "track": {
+                    "scheduled": "1",
+                    "actual": "1"
+                },
+                "info": {
+                    "status": 0,
+                    "passed": true,
+                    "positionStatus": "passed",
+                    "distance": 22952,
+                    "distanceFromStart": 124714
+                },
+                "delayReasons": null
+            },
+            {
+                "station": {
+                    "evaNr": "8000096_00",
+                    "name": "Stuttgart Hbf",
+                    "code": null,
+                    "geocoordinates": {
+                        "latitude": 48.784084,
+                        "longitude": 9.181635
+                    }
+                },
+                "timetable": {
+                    "scheduledArrivalTime": 1596902400000,
+                    "actualArrivalTime": 1596902460000,
+                    "showActualArrivalTime": true,
+                    "arrivalDelay": "+1",
+                    "scheduledDepartureTime": 1596902760000,
+                    "actualDepartureTime": 1596902820000,
+                    "showActualDepartureTime": true,
+                    "departureDelay": "+1"
+                },
+                "track": {
+                    "scheduled": "10",
+                    "actual": "10"
+                },
+                "info": {
+                    "status": 0,
+                    "passed": true,
+                    "positionStatus": "passed",
+                    "distance": 72795,
+                    "distanceFromStart": 197509
+                },
+                "delayReasons": null
+            },
+            {
+                "station": {
+                    "evaNr": "8000244_00",
+                    "name": "Mannheim Hbf",
+                    "code": null,
+                    "geocoordinates": {
+                        "latitude": 49.479354,
+                        "longitude": 8.468921
+                    }
+                },
+                "timetable": {
+                    "scheduledArrivalTime": 1596907740000,
+                    "actualArrivalTime": 1596907860000,
+                    "showActualArrivalTime": true,
+                    "arrivalDelay": "+2",
+                    "scheduledDepartureTime": 1596907920000,
+                    "actualDepartureTime": 1596908100000,
+                    "showActualDepartureTime": true,
+                    "departureDelay": "+3"
+                },
+                "track": {
+                    "scheduled": "2",
+                    "actual": "2"
+                },
+                "info": {
+                    "status": 0,
+                    "passed": true,
+                    "positionStatus": "departed",
+                    "distance": 93116,
+                    "distanceFromStart": 290625
+                },
+                "delayReasons": null
+            },
+            {
+                "station": {
+                    "evaNr": "8000105_00",
+                    "name": "Frankfurt (Main) Hbf",
+                    "code": null,
+                    "geocoordinates": {
+                        "latitude": 50.107145,
+                        "longitude": 8.663789
+                    }
+                },
+                "timetable": {
+                    "scheduledArrivalTime": 1596910080000,
+                    "actualArrivalTime": 1596910200000,
+                    "showActualArrivalTime": true,
+                    "arrivalDelay": "+2",
+                    "scheduledDepartureTime": 1596910440000,
+                    "actualDepartureTime": 1596910440000,
+                    "showActualDepartureTime": true,
+                    "departureDelay": ""
+                },
+                "track": {
+                    "scheduled": "9",
+                    "actual": "9"
+                },
+                "info": {
+                    "status": 0,
+                    "passed": false,
+                    "positionStatus": "future",
+                    "distance": 71215,
+                    "distanceFromStart": 361840
+                },
+                "delayReasons": [
+                    {
+                        "code": "21",
+                        "text": "Warten auf Fahrgäste aus einem anderen Zug"
+                    }
+                ]
+            },
+            {
+                "station": {
+                    "evaNr": "8002041_00",
+                    "name": "Frankfurt (Main) Süd",
+                    "code": null,
+                    "geocoordinates": {
+                        "latitude": 50.099365,
+                        "longitude": 8.686457
+                    }
+                },
+                "timetable": {
+                    "scheduledArrivalTime": 1596910680000,
+                    "actualArrivalTime": 1596910680000,
+                    "showActualArrivalTime": true,
+                    "arrivalDelay": "",
+                    "scheduledDepartureTime": 1596910680000,
+                    "actualDepartureTime": 1596910980000,
+                    "showActualDepartureTime": true,
+                    "departureDelay": "+5"
+                },
+                "track": {
+                    "scheduled": "6",
+                    "actual": "6"
+                },
+                "info": {
+                    "status": 2,
+                    "passed": false,
+                    "positionStatus": "future",
+                    "distance": 1834,
+                    "distanceFromStart": 363674
+                },
+                "delayReasons": null
+            },
+            {
+                "station": {
+                    "evaNr": "8000115_00",
+                    "name": "Fulda",
+                    "code": null,
+                    "geocoordinates": {
+                        "latitude": 50.554723,
+                        "longitude": 9.683977
+                    }
+                },
+                "timetable": {
+                    "scheduledArrivalTime": 1596913620000,
+                    "actualArrivalTime": 1596913920000,
+                    "showActualArrivalTime": true,
+                    "arrivalDelay": "+5",
+                    "scheduledDepartureTime": 1596913740000,
+                    "actualDepartureTime": 1596914040000,
+                    "showActualDepartureTime": true,
+                    "departureDelay": "+5"
+                },
+                "track": {
+                    "scheduled": "7",
+                    "actual": "7"
+                },
+                "info": {
+                    "status": 0,
+                    "passed": false,
+                    "positionStatus": "future",
+                    "distance": 87075,
+                    "distanceFromStart": 450749
+                },
+                "delayReasons": [
+                    {
+                        "code": "21",
+                        "text": "Warten auf Fahrgäste aus einem anderen Zug"
+                    }
+                ]
+            },
+            {
+                "station": {
+                    "evaNr": "8000020_00",
+                    "name": "Bad Hersfeld",
+                    "code": null,
+                    "geocoordinates": {
+                        "latitude": 50.869632,
+                        "longitude": 9.716182
+                    }
+                },
+                "timetable": {
+                    "scheduledArrivalTime": 1596915240000,
+                    "actualArrivalTime": 1596915540000,
+                    "showActualArrivalTime": true,
+                    "arrivalDelay": "+5",
+                    "scheduledDepartureTime": 1596915360000,
+                    "actualDepartureTime": 1596915660000,
+                    "showActualDepartureTime": true,
+                    "departureDelay": "+5"
+                },
+                "track": {
+                    "scheduled": "3",
+                    "actual": "3"
+                },
+                "info": {
+                    "status": 0,
+                    "passed": false,
+                    "positionStatus": "future",
+                    "distance": 35100,
+                    "distanceFromStart": 485849
+                },
+                "delayReasons": [
+                    {
+                        "code": "21",
+                        "text": "Warten auf Fahrgäste aus einem anderen Zug"
+                    }
+                ]
+            },
+            {
+                "station": {
+                    "evaNr": "8010097_00",
+                    "name": "Eisenach",
+                    "code": null,
+                    "geocoordinates": {
+                        "latitude": 50.976922,
+                        "longitude": 10.331986
+                    }
+                },
+                "timetable": {
+                    "scheduledArrivalTime": 1596916980000,
+                    "actualArrivalTime": 1596917280000,
+                    "showActualArrivalTime": true,
+                    "arrivalDelay": "+5",
+                    "scheduledDepartureTime": 1596917220000,
+                    "actualDepartureTime": 1596917400000,
+                    "showActualDepartureTime": true,
+                    "departureDelay": "+3"
+                },
+                "track": {
+                    "scheduled": "4",
+                    "actual": "4"
+                },
+                "info": {
+                    "status": 0,
+                    "passed": false,
+                    "positionStatus": "future",
+                    "distance": 44794,
+                    "distanceFromStart": 530643
+                },
+                "delayReasons": [
+                    {
+                        "code": "21",
+                        "text": "Warten auf Fahrgäste aus einem anderen Zug"
+                    }
+                ]
+            },
+            {
+                "station": {
+                    "evaNr": "8010136_00",
+                    "name": "Gotha",
+                    "code": null,
+                    "geocoordinates": {
+                        "latitude": 50.93907,
+                        "longitude": 10.712568
+                    }
+                },
+                "timetable": {
+                    "scheduledArrivalTime": 1596918060000,
+                    "actualArrivalTime": 1596918240000,
+                    "showActualArrivalTime": true,
+                    "arrivalDelay": "+3",
+                    "scheduledDepartureTime": 1596918180000,
+                    "actualDepartureTime": 1596918360000,
+                    "showActualDepartureTime": true,
+                    "departureDelay": "+3"
+                },
+                "track": {
+                    "scheduled": "3",
+                    "actual": "3"
+                },
+                "info": {
+                    "status": 0,
+                    "passed": false,
+                    "positionStatus": "future",
+                    "distance": 26994,
+                    "distanceFromStart": 557637
+                },
+                "delayReasons": [
+                    {
+                        "code": "21",
+                        "text": "Warten auf Fahrgäste aus einem anderen Zug"
+                    }
+                ]
+            },
+            {
+                "station": {
+                    "evaNr": "8010101_00",
+                    "name": "Erfurt Hbf",
+                    "code": null,
+                    "geocoordinates": {
+                        "latitude": 50.972551,
+                        "longitude": 11.038499
+                    }
+                },
+                "timetable": {
+                    "scheduledArrivalTime": 1596919020000,
+                    "actualArrivalTime": 1596919200000,
+                    "showActualArrivalTime": true,
+                    "arrivalDelay": "+3",
+                    "scheduledDepartureTime": 1596919620000,
+                    "actualDepartureTime": 1596919620000,
+                    "showActualDepartureTime": true,
+                    "departureDelay": ""
+                },
+                "track": {
+                    "scheduled": "10",
+                    "actual": "10"
+                },
+                "info": {
+                    "status": 0,
+                    "passed": false,
+                    "positionStatus": "future",
+                    "distance": 23138,
+                    "distanceFromStart": 580775
+                },
+                "delayReasons": [
+                    {
+                        "code": "21",
+                        "text": "Warten auf Fahrgäste aus einem anderen Zug"
+                    }
+                ]
+            },
+            {
+                "station": {
+                    "evaNr": "8010205_00",
+                    "name": "Leipzig Hbf",
+                    "code": null,
+                    "geocoordinates": {
+                        "latitude": 51.345471,
+                        "longitude": 12.382064
+                    }
+                },
+                "timetable": {
+                    "scheduledArrivalTime": 1596922140000,
+                    "actualArrivalTime": 1596922140000,
+                    "showActualArrivalTime": true,
+                    "arrivalDelay": "",
+                    "scheduledDepartureTime": null,
+                    "actualDepartureTime": null,
+                    "showActualDepartureTime": null,
+                    "departureDelay": ""
+                },
+                "track": {
+                    "scheduled": "12",
+                    "actual": "12"
+                },
+                "info": {
+                    "status": 0,
+                    "passed": false,
+                    "positionStatus": "future",
+                    "distance": 102489,
+                    "distanceFromStart": 683264
+                },
+                "delayReasons": null
+            }
+        ]
+    },
+    "connection": null,
+    "selectedRoute": {
+        "conflictInfo": {
+            "status": "NO_CONFLICT",
+            "text": null
+        },
+        "mobility": null
+    },
+    "active": null
+}
+
+
+Endpoint: /configs
+
+
+curl 'https://iceportal.de/api1/rs/configs' \
+-X 'GET' \
+-H 'Accept: application/json, text/plain, */*' \
+-H 'Content-Type: application/json' \
+-H 'Cookie: travelPlannerGuide-optout=true; gpv_ln=0%25; gpv_pn=startseite; gvo_v25=Direct; s_cc=true; s_fid=6A56BE3CE3E105FF-05699FF6BE9ADBAA; dbsession=cbc6a4ed.5ac615223ec8f' \
+-H 'Accept-Encoding: gzip, deflate, br' \
+-H 'Host: iceportal.de' \
+-H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15' \
+-H 'Referer: https://iceportal.de/' \
+-H 'Accept-Language: de-de' \
+-H 'Connection: keep-alive'
+
+{
+    "hotspotLink": "http://login.wifionice.de",
+    "train": {
+        "tzn": "Tz9014",
+        "serie": "412"
+    },
+    "map": {
+        "poiCarousel": {
+            "active": true
+        },
+        "poiRadiusDefault": 100000,
+        "url": "/Karte_neu"
+    },
+    "page": {
+        "travelPoiTimeout": 120000
+    },
+    "dialog": {},
+    "tripInfo": {
+        "trainrouteErrorText": "Aus technischen Gründen können leider keine Reiseinformationen angezeigt werden."
+    },
+    "travelPlanner": {
+        "hint": "<p>Liebe Gäste, wir arbeiten an weiteren Verbesserungen für Sie!<br/>Bald können Sie die Reise-Information individuell anpassen und Ihre persönlichen Anschlussverbindungen speichern.</p>"
+    }
+}
+
+
+Endpoint: /page
+
+curl 'https://iceportal.de/api1/rs/page/' \
+-X 'GET' \
+-H 'Accept: application/json, text/plain, */*' \
+-H 'Content-Type: application/json' \
+-H 'Cookie: travelPlannerGuide-optout=true; gpv_ln=0%25; gpv_pn=startseite; gvo_v25=Direct; s_cc=true; s_fid=6A56BE3CE3E105FF-05699FF6BE9ADBAA; dbsession=cbc6a4ed.5ac615223ec8f' \
+-H 'Accept-Encoding: gzip, deflate, br' \
+-H 'Host: iceportal.de' \
+-H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15' \
+-H 'Referer: https://iceportal.de/' \
+-H 'Accept-Language: de-de' \
+-H 'Connection: keep-alive'
+
+
+{
+    "contentType": null,
+    "title": "Startseite",
+    "subtitle": null,
+    "logo": null,
+    "segment": null,
+    "footer": {
+        "mafo": {
+            "filterIds": [],
+            "category": null,
+            "navigation": null,
+            "date": null,
+            "duration": null,
+            "picture": null,
+            "subject": "<p>Bitte helfen Sie uns, das ICE Portal noch besser zu machen. Über <a href=\"http://www.iqsn.de/L1/cawi/dbzp2/1_1_1/DE.php?ZugNr=ICE592&klasse=2\" target=\"_blank\">Ihr Feedback</a> freuen wir uns.</p>",
+            "subtitle": null,
+            "title": "Feedback zum ICE Portal?",
+            "type": null,
+            "providerHint": null,
+            "logo": null,
+            "provider": null,
+            "video": null,
+            "theme": null,
+            "background": null,
+            "weather": null,
+            "reload": null
+        },
+        "navigationItems": [
+            {
+                "external": false,
+                "href": "/Footer/impressum_R3",
+                "linktext": "Impressum",
+                "tracking": {
+                    "groupName": null,
+                    "groupPosition": null,
+                    "linkName": "Impressum",
+                    "linkPosition": null
+                }
+            },
+            {
+                "external": false,
+                "href": "/Footer/Kontakt_ICE",
+                "linktext": "Kontakt",
+                "tracking": {
+                    "groupName": null,
+                    "groupPosition": null,
+                    "linkName": "Kontakt",
+                    "linkPosition": null
+                }
+            },
+            {
+                "external": false,
+                "href": "/Footer/rechtliches",
+                "linktext": "Rechtliches",
+                "tracking": {
+                    "groupName": null,
+                    "groupPosition": null,
+                    "linkName": "Nutzungsbedingungen & Datenschutz",
+                    "linkPosition": null
+                }
+            }
+        ]
+    },
+    "tracking": null,
+    "type": "StartPage",
+    "introGroup": {
+        "layout": {
+            "background": null,
+            "theme": null,
+            "screenXS": {
+                "type": "carousel",
+                "columns": null,
+                "rows": null,
+                "maxItems": 15,
+                "itemSize": null
+            },
+            "screenS": {
+                "type": "carousel",
+                "columns": null,
+                "rows": null,
+                "maxItems": 15,
+                "itemSize": null
+            },
+            "screenM": {
+                "type": "carousel",
+                "columns": null,
+                "rows": null,
+                "maxItems": 15,
+                "itemSize": null
+            },
+            "screenL": {
+                "type": "carousel",
+                "columns": null,
+                "rows": null,
+                "maxItems": 15,
+                "itemSize": null
+            },
+            "screenXL": {
+                "type": "carousel",
+                "columns": null,
+                "rows": null,
+                "maxItems": 15,
+                "itemSize": null
+            }
+        },
+        "title": null,
+        "subtitle": null,
+        "logo": null,
+        "filter": null,
+        "teaserTop": null,
+        "navigation": null,
+        "groupTitle": null,
+        "cityInfo": null,
+        "dailyTip": null,
+        "items": [
+            {
+                "filterIds": [],
+                "category": null,
+                "navigation": {
+                    "external": true,
+                    "href": "https://joynselection.de/gratis/filme/Three-Billboards-Outside-Ebbing~2C-Missouri",
+                    "linktext": "Jetzt anschauen",
+                    "tracking": {
+                        "groupName": "Intro-Teasergruppe",
+                        "groupPosition": 1,
+                        "linkName": "https://joynselection.de/gratis/filme/Three-Billboards-Outside-Ebbing~2C-Missouri",
+                        "linkPosition": 1
+                    }
+                },
+                "date": null,
+                "duration": null,
+                "picture": null,
+                "subject": "Jetzt gratis Filme & Serien bei Joyn SELECTION streamen – ohne Verbrauch Ihres Datenvolumens",
+                "subtitle": null,
+                "title": "<b>Unser Blockbuster</b> für Ihre Reise ",
+                "type": "poster",
+                "providerHint": "Angebot von <img src=\"img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/intro/Maxdome_Intro_Teaser/Joyn_Logo/Poweredby_Bild_SVG_Neu.data.svg\"alt=\"Joyn SELECTION\">",
+                "logo": {
+                    "alt": "Deutsche Bahn",
+                    "copyRight": null,
+                    "src": "img/static/logos/logo-db.svg",
+                    "title": null,
+                    "objectFit": null,
+                    "marker": null
+                },
+                "provider": null,
+                "video": null,
+                "theme": "gradientLight",
+                "background": {
+                    "color": null,
+                    "image": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/intro/Maxdome_Intro_Teaser/Three_Billboards_outside_of_Ebbing_Missouri/Three_Billboards_Outside_Ebbing_Missouri_16-5.data.jpg",
+                    "position": "right"
+                },
+                "weather": null,
+                "reload": null
+            },
+            {
+                "filterIds": [],
+                "category": null,
+                "navigation": {
+                    "external": false,
+                    "href": "/spiele_uebersicht",
+                    "linktext": "Zu den Spielen",
+                    "tracking": {
+                        "groupName": "Intro-Teasergruppe",
+                        "groupPosition": 1,
+                        "linkName": "Spiele",
+                        "linkPosition": 2
+                    }
+                },
+                "date": null,
+                "duration": null,
+                "picture": null,
+                "subject": "Hier finden Sie unsere bunte Auswahl an unterhaltsamen Spielen",
+                "subtitle": null,
+                "title": "Mit <b>Spaß & Logik</b> zum Ziel",
+                "type": "poster",
+                "providerHint": null,
+                "logo": {
+                    "alt": "Deutsche Bahn",
+                    "copyRight": null,
+                    "src": "img/static/logos/logo-db.svg",
+                    "title": null,
+                    "objectFit": null,
+                    "marker": null
+                },
+                "provider": null,
+                "video": null,
+                "theme": "gradientLight",
+                "background": {
+                    "color": null,
+                    "image": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/intro/Spiele/August_Intro_teaser_Spiele_16-5.data.jpg",
+                    "position": "right"
+                },
+                "weather": null,
+                "reload": null
+            }
+        ],
+        "modules": [],
+        "noItemsText": null,
+        "search": null,
+        "reload": null
+    },
+    "teaserGroups": [
+        {
+            "layout": {
+                "background": {
+                    "color": "#f0f3f5ff",
+                    "image": null,
+                    "position": null
+                },
+                "theme": null,
+                "screenXS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 12,
+                    "itemSize": 40
+                },
+                "screenS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 12,
+                    "itemSize": 29
+                },
+                "screenM": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 12,
+                    "itemSize": 21.5
+                },
+                "screenL": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 12,
+                    "itemSize": 15
+                },
+                "screenXL": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 12,
+                    "itemSize": 15
+                }
+            },
+            "title": "Unser <b>Entertainment-Angebot</b> für Sie",
+            "subtitle": null,
+            "logo": null,
+            "filter": null,
+            "teaserTop": null,
+            "navigation": null,
+            "groupTitle": null,
+            "cityInfo": null,
+            "dailyTip": null,
+            "items": [
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/nachrichten",
+                        "linktext": "Nachrichten",
+                        "tracking": {
+                            "groupName": "Navigationsband",
+                            "groupPosition": 2,
+                            "linkName": "Nachrichten",
+                            "linkPosition": 1
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Nachrichten",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/navigationsband/TB_ICON_Nachrichten.data.svg",
+                        "title": null,
+                        "objectFit": null,
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Nachrichten",
+                    "type": "tile",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": true,
+                        "href": "https://joynselection.de",
+                        "linktext": "Filme & Serien",
+                        "tracking": {
+                            "groupName": "Navigationsband",
+                            "groupPosition": 2,
+                            "linkName": "Filme & Serien",
+                            "linkPosition": 2
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Maxdome",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/navigationsband/TB_ICON_Maxdome.data.svg",
+                        "title": null,
+                        "objectFit": null,
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Filme & Serien",
+                    "type": "tile",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/hoerbuecher",
+                        "linktext": "Hörbücher",
+                        "tracking": {
+                            "groupName": "Navigationsband",
+                            "groupPosition": 2,
+                            "linkName": "Hörbücher",
+                            "linkPosition": 3
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Hörbücher",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/navigationsband/TB_ICON_Hoerbuecher.data.svg",
+                        "title": null,
+                        "objectFit": null,
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Hörbücher",
+                    "type": "tile",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/zeitungskiosk",
+                        "linktext": "Zeitungen & Magazine",
+                        "tracking": {
+                            "groupName": "Navigationsband",
+                            "groupPosition": 2,
+                            "linkName": "Zeitungen & Magazine",
+                            "linkPosition": 4
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Zeitungskiosk",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/navigationsband/TB_ICON_Zeitungskiosk.data.svg",
+                        "title": null,
+                        "objectFit": null,
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Zeitungen & Magazine",
+                    "type": "tile",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/Reiseinspiration",
+                        "linktext": "Reise-Inspiration",
+                        "tracking": {
+                            "groupName": "Navigationsband",
+                            "groupPosition": 2,
+                            "linkName": "Reise-Inspiration",
+                            "linkPosition": 5
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Reiseinspiration",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/navigationsband/TB_ICON_Reiseinspiration.data.svg",
+                        "title": null,
+                        "objectFit": null,
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Reise-Inspiration",
+                    "type": "tile",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/spiele_uebersicht",
+                        "linktext": "Spiele",
+                        "tracking": {
+                            "groupName": "Navigationsband",
+                            "groupPosition": 2,
+                            "linkName": "Spiele",
+                            "linkPosition": 6
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Spiele",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/navigationsband/TB_ICON_Spiele.data.svg",
+                        "title": null,
+                        "objectFit": null,
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Spiele",
+                    "type": "tile",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/Trends_und_Lifestyle",
+                        "linktext": "Trends & Lifestyle",
+                        "tracking": {
+                            "groupName": "Navigationsband",
+                            "groupPosition": 2,
+                            "linkName": "Trends & Lifestyle",
+                            "linkPosition": 7
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Trends & Lifestyle",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/navigationsband/TB_ICON_Trends_und_Lifestyle.data.svg",
+                        "title": null,
+                        "objectFit": null,
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Trends & Lifestyle",
+                    "type": "tile",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/11_freunde_fussballnews_neu",
+                        "linktext": "11 FREUNDE Fußball-News",
+                        "tracking": {
+                            "groupName": "Navigationsband",
+                            "groupPosition": 2,
+                            "linkName": "11 FREUNDE Fußball-News",
+                            "linkPosition": 8
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "11Freunde",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/navigationsband/TB_ICON_11Freunde.data.svg",
+                        "title": null,
+                        "objectFit": null,
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "11 FREUNDE Fußball-News",
+                    "type": "tile",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/Rund_um_die_DB",
+                        "linktext": "Rund um die DB  ",
+                        "tracking": {
+                            "groupName": "Navigationsband",
+                            "groupPosition": 2,
+                            "linkName": "Rund um die DB  ",
+                            "linkPosition": 9
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Rund um die DB",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/navigationsband/TB_ICON_Rund_um_DB.data.svg",
+                        "title": null,
+                        "objectFit": null,
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Rund um die DB  ",
+                    "type": "tile",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/kinderwelt",
+                        "linktext": "Kinderwelt",
+                        "tracking": {
+                            "groupName": "Navigationsband",
+                            "groupPosition": 2,
+                            "linkName": "Kinderwelt",
+                            "linkPosition": 10
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Kinderwelt",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/navigationsband/TB_ICON_Kinderwelt.data.svg",
+                        "title": null,
+                        "objectFit": null,
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Kinderwelt",
+                    "type": "tile",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/staedtejournal/frankfurt_am_main",
+                        "linktext": "Städtejournal",
+                        "tracking": {
+                            "groupName": "Navigationsband",
+                            "groupPosition": 2,
+                            "linkName": "Städtejournal",
+                            "linkPosition": 11
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Reiseinspiration",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/navigationsband/TB_ICON_Staedtejournal.data.svg",
+                        "title": null,
+                        "objectFit": null,
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Städtejournal",
+                    "type": "tile",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": {
+                        "type": "nextStationChange",
+                        "url": "/teaser/startseite/navigationsband/staedtejournal"
+                    }
+                }
+            ],
+            "modules": [],
+            "noItemsText": null,
+            "search": null,
+            "reload": null
+        },
+        {
+            "layout": {
+                "background": {
+                    "color": "#e5ebf3ff",
+                    "image": null,
+                    "position": null
+                },
+                "theme": null,
+                "screenXS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 84
+                },
+                "screenS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 64
+                },
+                "screenM": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 37.3
+                },
+                "screenL": {
+                    "type": "grid",
+                    "columns": 3,
+                    "rows": 1,
+                    "maxItems": 3,
+                    "itemSize": null
+                },
+                "screenXL": {
+                    "type": "grid",
+                    "columns": 3,
+                    "rows": 1,
+                    "maxItems": 3,
+                    "itemSize": null
+                }
+            },
+            "title": "Unsere <strong>Tipps </strong>zum <strong>nächsten Halt</strong>",
+            "subtitle": "Städtejournal",
+            "logo": null,
+            "filter": null,
+            "teaserTop": null,
+            "navigation": {
+                "external": false,
+                "href": "/staedtejournal/frankfurt_am_main",
+                "linktext": "Stadt entdecken",
+                "tracking": {
+                    "groupName": "Städtejournal",
+                    "groupPosition": 3,
+                    "linkName": "Städtejournal",
+                    "linkPosition": 0
+                }
+            },
+            "groupTitle": "In und um Frankfurt am Main",
+            "cityInfo": {
+                "filterIds": [],
+                "category": null,
+                "navigation": {
+                    "external": false,
+                    "href": "/staedtejournal/frankfurt_am_main/main_metropole_frankfurt",
+                    "linktext": "Städteinfo anzeigen",
+                    "tracking": {
+                        "groupName": "Städtejournal",
+                        "groupPosition": 3,
+                        "linkName": "Main-Metropole Frankfurt",
+                        "linkPosition": 1
+                    }
+                },
+                "date": null,
+                "duration": null,
+                "picture": null,
+                "subject": null,
+                "subtitle": "Hessen",
+                "title": "Frankfurt am Main",
+                "type": null,
+                "providerHint": null,
+                "logo": null,
+                "provider": null,
+                "video": null,
+                "theme": null,
+                "background": null,
+                "weather": {
+                    "picture": {
+                        "alt": "bewölkt",
+                        "copyRight": null,
+                        "src": "img/static/weather/bewoelkt-64.svg",
+                        "title": null,
+                        "objectFit": null,
+                        "marker": null
+                    },
+                    "minTemperature": 20,
+                    "maxTemperature": 37,
+                    "type": "weather",
+                    "date": null
+                },
+                "reload": null
+            },
+            "dailyTip": {
+                "filterIds": [],
+                "category": {
+                    "id": "poi-essen-trinken",
+                    "text": "Essen & Trinken"
+                },
+                "navigation": {
+                    "external": false,
+                    "href": "/staedtejournal/frankfurt_am_main/restaurant_heimat",
+                    "linktext": "Frankfurt am Main: Heimat",
+                    "tracking": {
+                        "groupName": "Städtejournal",
+                        "groupPosition": 3,
+                        "linkName": "Frisch auf den Tisch",
+                        "linkPosition": 2
+                    }
+                },
+                "date": null,
+                "duration": null,
+                "picture": {
+                    "alt": "Restaurant Heimat in Frankfurt",
+                    "copyRight": null,
+                    "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Staedtejournal/Frankfurt_am_Main/Essen__Trinken/Frankfurt_Heimat_Bildd1481e1_data.data.jpg",
+                    "title": null,
+                    "objectFit": {
+                        "aspectRatio": 1.77777778,
+                        "position": "left top"
+                    },
+                    "marker": {
+                        "type": "ribbon",
+                        "text": "Tipp des Tages",
+                        "subline": null
+                    }
+                },
+                "subject": "Hier kommen auf tagesfrische Zutaten der Saison auf den Tisch.",
+                "subtitle": null,
+                "title": "Restaurant Heimat",
+                "type": "trailer",
+                "providerHint": null,
+                "logo": null,
+                "provider": null,
+                "video": null,
+                "theme": null,
+                "background": null,
+                "weather": null,
+                "reload": null
+            },
+            "items": [
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/staedtejournal/frankfurt_am_main/frankfurt_video",
+                        "linktext": "Video: Geheimtipps in Frankfurt",
+                        "tracking": {
+                            "groupName": "Städtejournal",
+                            "groupPosition": 3,
+                            "linkName": "Video: Geheimtipps in Frankfurt",
+                            "linkPosition": 3
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Video Frankfurt",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Staedtejournal/Frankfurt_am_Main/Wissenswertes/Video_Frankfurt_Bildd2074e1_data.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Wissenswertes",
+                    "title": "Video: Cityguide Frankfurt",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/staedtejournal/frankfurt_am_main/roemer",
+                        "linktext": "Der Römer: Das Wahrzeichen von Frankfurt (Main)",
+                        "tracking": {
+                            "groupName": "Städtejournal",
+                            "groupPosition": 3,
+                            "linkName": "Der Römer: Das Wahrzeichen von Frankfurt (Main)",
+                            "linkPosition": 4
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Der Römer in Frankfurt am Main",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Staedtejournal/Frankfurt_am_Main/Sehenswertes/Wahrzeichen_Frankfurt_Main_Bildd504e1_data.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Sehenswertes",
+                    "title": "Der Römer: Das Wahrzeichen von Frankfurt (Main)",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/staedtejournal/frankfurt_am_main/frankfurt_hauptbahnhof",
+                        "linktext": "Frankfurt Hbf",
+                        "tracking": {
+                            "groupName": "Städtejournal",
+                            "groupPosition": 3,
+                            "linkName": "Die Drehscheibe Deutschlands",
+                            "linkPosition": 5
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Hauptbahnhof Frankfurt (Main)",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Staedtejournal/Frankfurt_am_Main/Bahnhof/Frankfurt_Main_Hbf_Bildd249e1_data.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Bahnhof",
+                    "title": "Infos zum Frankfurter Hauptbahnhof",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/staedtejournal/frankfurt_am_main/fuenf_fakten_frankfurt",
+                        "linktext": "Angeberwissen Frankfurt",
+                        "tracking": {
+                            "groupName": "Städtejournal",
+                            "groupPosition": 3,
+                            "linkName": "Angeberwissen Frankfurt",
+                            "linkPosition": 6
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Zwei Teller von oben mit grüner Soße",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Staedtejournal/05_Contentseiten_-_Staedte_R_2.0/Fuenf_Fakten/Frankfurt_Bilder_5_Fakten/Bilder_Frankfurtd760e1_data.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Wissenswertes",
+                    "title": "Angeberwissen Frankfurt",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/staedtejournal/frankfurt_am_main/brueckenviertel",
+                        "linktext": "Frankfurt: Brückenviertel",
+                        "tracking": {
+                            "groupName": "Städtejournal",
+                            "groupPosition": 3,
+                            "linkName": "Das Brückenviertel ",
+                            "linkPosition": 7
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Brueckenviertel in Frankfurt",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Staedtejournal/Frankfurt_am_Main/Shopping__Lifestyle/Frankfurt_Brueckenviertel_Bildd1268e1_data.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Shopping & Lifestyle",
+                    "title": "Brückenviertel und der \"Markt im Hof\"  ",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/staedtejournal/frankfurt_am_main/schirn_kunsthalle",
+                        "linktext": "Frankfurt am Main: Schirn Kunsthalle",
+                        "tracking": {
+                            "groupName": "Städtejournal",
+                            "groupPosition": 3,
+                            "linkName": "Schirn Kunsthalle",
+                            "linkPosition": 8
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Schirn Kunsthalle in Frankfurt",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Staedtejournal/Frankfurt_am_Main/Kunst__Kultur/Frankfurt_Schirn_Bildd1733e1_data.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Kunst & Kultur",
+                    "title": "Schirn Kunsthalle Frankfurt",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                }
+            ],
+            "modules": [],
+            "noItemsText": null,
+            "search": {
+                "title": "Weitere Städte",
+                "type": "cities"
+            },
+            "reload": {
+                "type": "nextStationChange",
+                "url": "/group/startseite/tw_staedtejournal"
+            }
+        },
+        {
+            "layout": {
+                "background": {
+                    "color": "#d7dce1ff",
+                    "image": null,
+                    "position": null
+                },
+                "theme": null,
+                "screenXS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 84
+                },
+                "screenS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 64
+                },
+                "screenM": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 37.3
+                },
+                "screenL": {
+                    "type": "grid",
+                    "columns": 3,
+                    "rows": 1,
+                    "maxItems": 3,
+                    "itemSize": null
+                },
+                "screenXL": {
+                    "type": "grid",
+                    "columns": 3,
+                    "rows": 1,
+                    "maxItems": 3,
+                    "itemSize": null
+                }
+            },
+            "title": "Endlich <b>Sommer</b> - Ausflüge, <b>Reisetipps</b> und mehr",
+            "subtitle": "Reise-Inspiration",
+            "logo": null,
+            "filter": null,
+            "teaserTop": null,
+            "navigation": {
+                "external": false,
+                "href": "/Reiseinspiration",
+                "linktext": "Inspirieren lassen",
+                "tracking": {
+                    "groupName": "Reise-Inspiration",
+                    "groupPosition": 4,
+                    "linkName": "Reise-Inspiration",
+                    "linkPosition": 0
+                }
+            },
+            "groupTitle": null,
+            "cityInfo": null,
+            "dailyTip": null,
+            "items": [
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/tw_reiseinspiration/hausboot-ferien",
+                        "linktext": "Hausboot-Ferien",
+                        "tracking": {
+                            "groupName": "Reise-Inspiration",
+                            "groupPosition": 4,
+                            "linkName": "Hausboot-Ferien",
+                            "linkPosition": 1
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Hausboot-Ferien",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Reiseinspiration/Outdoor_und_Abenteuer/ZZ_Saisonales/Hausboot-Ferien/Hausboot-Ferien_TB.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Outdoor & Abenteuer",
+                    "title": "Auf zu neuen Ufern!",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/tw_reiseinspiration/geniale_radwege_in_deutschland",
+                        "linktext": "Geniale Radwege in Deutschland",
+                        "tracking": {
+                            "groupName": "Reise-Inspiration",
+                            "groupPosition": 4,
+                            "linkName": "Geniale Radwege in Deutschland",
+                            "linkPosition": 2
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Geniale Radwege in Deutschland",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Reiseinspiration/Ausfluege_und_Kurztrips/Geniale_Radwege_in_Deutschland/268776263_TB.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Ausflüge & Kurztrips",
+                    "title": "Geniale Radwege in Deutschland",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/tw_reiseinspiration/outdoor_actions_fuer_adrenalin_junkies",
+                        "linktext": "Outdoor-Actions für Adrenalin-Junkies",
+                        "tracking": {
+                            "groupName": "Reise-Inspiration",
+                            "groupPosition": 4,
+                            "linkName": "Outdoor-Actions für Adrenalin-Junkies",
+                            "linkPosition": 3
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Outdoor-Actions für Adrenalin Junkies",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Reiseinspiration/Outdoor_und_Abenteuer/Outdoor-Actions_fuer_Adrenalin_Junkies/Outdoor-Actions_fuer_Adrenalin_Junkies_TB.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Outdoor & Abenteuer",
+                    "title": "Nur für starke Nerven: die weltweit krassesten Outdoor-Actions",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/tw_reiseinspiration/ungewoehnliche-unterkuenfte",
+                        "linktext": "Ungewöhnliche Unterkünfte",
+                        "tracking": {
+                            "groupName": "Reise-Inspiration",
+                            "groupPosition": 4,
+                            "linkName": "Ungewöhnliche Unterkünfte",
+                            "linkPosition": 4
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Ungewöhnliche Unterkünfte",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Reiseinspiration/Ausfluege_und_Kurztrips/Ungewoehnliche_Unterkuenfte/Ungewoehnliche_Unterkuenfte_TB.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Ausflüge & Kurztrips",
+                    "title": "Vom Baumhaus bis zur Betonröhre: Sieben originelle Hotel-Varianten",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/tw_reiseinspiration/europas_atemberaubende_aussichten",
+                        "linktext": "Europas atemberaubende Aussichten",
+                        "tracking": {
+                            "groupName": "Reise-Inspiration",
+                            "groupPosition": 4,
+                            "linkName": "Europas atemberaubende Aussichten",
+                            "linkPosition": 5
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Hallstätter See, Österreich",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Reiseinspiration/Land_und_Leute/Atemberaubende_Aussichtspunkte/Aussichtspunkte_5fingersd3412e1_data.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Land & Leute",
+                    "title": "Europas atemberaubende Aussichten",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/tw_reiseinspiration/stadtfluchten_in_deutschland",
+                        "linktext": "Raus aus der Stadt: Fünf schöne Stadtfluchten in Deutschland",
+                        "tracking": {
+                            "groupName": "Reise-Inspiration",
+                            "groupPosition": 4,
+                            "linkName": "Raus aus der Stadt: Fünf schöne Stadtfluchten in Deutschland",
+                            "linkPosition": 6
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Egglburger See",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Reiseinspiration/Ausfluege_und_Kurztrips/Stadtfluchten_in_Deutschland/Aufmacherbildd3619e1_data.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Ausflüge & Kurztrips",
+                    "title": "Stadtfluchten in Deutschland",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                }
+            ],
+            "modules": [],
+            "noItemsText": null,
+            "search": null,
+            "reload": null
+        },
+        {
+            "layout": {
+                "background": {
+                    "color": "#f0f3f5ff",
+                    "image": null,
+                    "position": null
+                },
+                "theme": null,
+                "screenXS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 84
+                },
+                "screenS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 64
+                },
+                "screenM": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 37.3
+                },
+                "screenL": {
+                    "type": "grid",
+                    "columns": 3,
+                    "rows": 1,
+                    "maxItems": 3,
+                    "itemSize": null
+                },
+                "screenXL": {
+                    "type": "grid",
+                    "columns": 3,
+                    "rows": 1,
+                    "maxItems": 3,
+                    "itemSize": null
+                }
+            },
+            "title": "Fakten, Themen, Services <b>für Ihre Reise</b>",
+            "subtitle": "Rund um die DB",
+            "logo": null,
+            "filter": null,
+            "teaserTop": null,
+            "navigation": {
+                "external": false,
+                "href": "/Rund_um_die_DB",
+                "linktext": "Bahn entdecken",
+                "tracking": {
+                    "groupName": "Rund um die DB",
+                    "groupPosition": 5,
+                    "linkName": "Rund um die DB",
+                    "linkPosition": 0
+                }
+            },
+            "groupTitle": null,
+            "cityInfo": null,
+            "dailyTip": null,
+            "items": [
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/Rund_um_die_DB/Services_-_Rund_um_Ihre_Reise/corona_sicherheit",
+                        "linktext": "Corona Maßnahmen",
+                        "tracking": {
+                            "groupName": "Rund um die DB",
+                            "groupPosition": 5,
+                            "linkName": "Corona Maßnahmen",
+                            "linkPosition": 1
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Corona Maßnahmen",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/RuDB/Sonderthemen/Corona-Massnahmen/Corona_Bild_Allgemein_16-5.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Corona-Informationen",
+                    "title": "Gemeinsam für mehr Sicherheit in der Corona-Zeit",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/Rund_um_die_DB/db_einblicke/zugnummer_neu",
+                        "linktext": "Wie entstehen Zugnummern bei der Deutschen Bahn?",
+                        "tracking": {
+                            "groupName": "Rund um die DB",
+                            "groupPosition": 5,
+                            "linkName": "Wie entstehen Zugnummern bei der Deutschen Bahn?",
+                            "linkPosition": 2
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Zugnummer",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/RuDB/DB_Einblicke/DB_Zugnummer/Zugnummer_-_Bildd2411e1_data.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Wussten Sie schon, ...",
+                    "title": "Wie entstehen Zugnummern bei der Deutschen Bahn?",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/Rund_um_die_DB/Services_-_Rund_um_Ihre_Reise/db-gepaeckservice",
+                        "linktext": "DB Gepäckservice",
+                        "tracking": {
+                            "groupName": "Rund um die DB",
+                            "groupPosition": 5,
+                            "linkName": "DB Gepäckservice",
+                            "linkPosition": 3
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "DB Gepäckservice: So leicht kann reisen sein",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/RuDB/Services/Gepaeckservice/DB_Gepaeckservice_Bild_Schuhe_16-5.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "DB Gepäckservice",
+                    "title": "Gepäckservice: So leicht kann reisen sein",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/Rund_um_die_DB/db_einblicke/zugcheck_neu",
+                        "linktext": "Zug-Check im Vorbeifahren: Wayside Monitoring ",
+                        "tracking": {
+                            "groupName": "Rund um die DB",
+                            "groupPosition": 5,
+                            "linkName": "Zug-Check im Vorbeifahren: Wayside Monitoring ",
+                            "linkPosition": 4
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": null,
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/RuDB/DB_Einblicke/ZugCheck/Zugcheck_16-5.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Wussten Sie schon, ...",
+                    "title": "Zug-Check im Vorbeifahren: Wayside Monitoring ",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/Rund_um_die_DB/db_einblicke/greentech_festival",
+                        "linktext": "Greentech Festival",
+                        "tracking": {
+                            "groupName": "Rund um die DB",
+                            "groupPosition": 5,
+                            "linkName": "Greentech Festival",
+                            "linkPosition": 5
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Greentech Festival",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/RuDB/Greentech_Festival/greentech_festival_technisches_Bild.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Greentech Festival ",
+                    "title": "DB ist Premiumpartner ",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/Rund_um_die_DB/db_einblicke/optic_fiber_sensing",
+                        "linktext": "Optic Fiber Sensing",
+                        "tracking": {
+                            "groupName": "Rund um die DB",
+                            "groupPosition": 5,
+                            "linkName": "Optic Fiber Sensing",
+                            "linkPosition": 6
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Optic Fiber Sensing",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/RuDB/DB_Einblicke/Fiber_Optic_Sensing/Optic_Fiber_sensing_16-5.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Wussten Sie schon, ...",
+                    "title": "Immer ein Ohr an der Schiene: Fiber Optic Sensing",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                }
+            ],
+            "modules": [],
+            "noItemsText": null,
+            "search": null,
+            "reload": null
+        },
+        {
+            "layout": {
+                "background": {
+                    "color": "#e5ebf3ff",
+                    "image": null,
+                    "position": null
+                },
+                "theme": null,
+                "screenXS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 84
+                },
+                "screenS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 64
+                },
+                "screenM": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 37.3
+                },
+                "screenL": {
+                    "type": "grid",
+                    "columns": 3,
+                    "rows": 1,
+                    "maxItems": 3,
+                    "itemSize": null
+                },
+                "screenXL": {
+                    "type": "grid",
+                    "columns": 3,
+                    "rows": 1,
+                    "maxItems": 3,
+                    "itemSize": null
+                }
+            },
+            "title": "<b>Bleiben Sie informiert:</b> Die wichtigsten News auf einen Blick",
+            "subtitle": "Nachrichten",
+            "logo": null,
+            "filter": null,
+            "teaserTop": null,
+            "navigation": {
+                "external": false,
+                "href": "/nachrichten",
+                "linktext": "Alle Nachrichten",
+                "tracking": {
+                    "groupName": "Nachrichten",
+                    "groupPosition": 6,
+                    "linkName": "Nachrichten",
+                    "linkPosition": 0
+                }
+            },
+            "groupTitle": null,
+            "cityInfo": null,
+            "dailyTip": null,
+            "items": [
+                {
+                    "filterIds": [],
+                    "category": {
+                        "id": "news-inland",
+                        "text": "Inland"
+                    },
+                    "navigation": {
+                        "external": false,
+                        "href": "/nachrichten/tagesschau_der_hohe_preis_der_einigkeit",
+                        "linktext": "Der hohe Preis der Einigkeit",
+                        "tracking": {
+                            "groupName": "Nachrichten",
+                            "groupPosition": 6,
+                            "linkName": "Der hohe Preis der Einigkeit",
+                            "linkPosition": 1
+                        }
+                    },
+                    "date": "2020-08-08T16:38:05+02:00",
+                    "duration": null,
+                    "picture": {
+                        "alt": "Norbert Walter-Borjans und Saskia Esken auf dem SPD-Bundesparteitag im Dezember 2019",
+                        "copyRight": null,
+                        "src": "img/news/TAGESSCHAU/tagesschau_der_hohe_preis_der_einigkeit.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "SPD",
+                    "title": "Der hohe Preis der Einigkeit",
+                    "type": "card",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": "Tagesschau",
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": {
+                        "id": "news-ausland",
+                        "text": "Ausland"
+                    },
+                    "navigation": {
+                        "external": false,
+                        "href": "/nachrichten/tagesschau_demonstranten_stuermen_aussenministerium",
+                        "linktext": "Demonstranten stürmen Außenministerium",
+                        "tracking": {
+                            "groupName": "Nachrichten",
+                            "groupPosition": 6,
+                            "linkName": "Demonstranten stürmen Außenministerium",
+                            "linkPosition": 2
+                        }
+                    },
+                    "date": "2020-08-08T18:21:06+02:00",
+                    "duration": null,
+                    "picture": {
+                        "alt": "Eine in Rauch gehüllte Straße bei Protesten gegen die libanesische Regierung in Beirut.",
+                        "copyRight": null,
+                        "src": "img/news/TAGESSCHAU/tagesschau_demonstranten_stuermen_aussenministerium.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Proteste in Beirut",
+                    "title": "Demonstranten stürmen Außenministerium",
+                    "type": "card",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": "Tagesschau",
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": {
+                        "id": "news-panorama",
+                        "text": "Panorama"
+                    },
+                    "navigation": {
+                        "external": false,
+                        "href": "/nachrichten/n-tv_demonstranten_stuermen_aussenministerium",
+                        "linktext": "Demonstranten stürmen Außenministerium",
+                        "tracking": {
+                            "groupName": "Nachrichten",
+                            "groupPosition": 6,
+                            "linkName": "Demonstranten stürmen Außenministerium",
+                            "linkPosition": 3
+                        }
+                    },
+                    "date": "2020-08-08T18:40:00+02:00",
+                    "duration": null,
+                    "picture": {
+                        "alt": "Dichte Rauchschwaden begleiten die Proteste in Beirut.",
+                        "copyRight": null,
+                        "src": "img/news/NTV/n-tv_demonstranten_stuermen_aussenministerium.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Wut nach Explosionen in Beirut",
+                    "title": "Demonstranten stürmen Außenministerium",
+                    "type": "card",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": "n-tv",
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": {
+                        "id": "news-sport",
+                        "text": "Sport"
+                    },
+                    "navigation": {
+                        "external": false,
+                        "href": "/nachrichten/sportschau_leichtathletik-dm_in_braunschweig_jetzt_live",
+                        "linktext": "Leichtathletik-DM in Braunschweig jetzt live",
+                        "tracking": {
+                            "groupName": "Nachrichten",
+                            "groupPosition": 6,
+                            "linkName": "Leichtathletik-DM in Braunschweig jetzt live",
+                            "linkPosition": 4
+                        }
+                    },
+                    "date": "2020-08-08T18:52:38+02:00",
+                    "duration": null,
+                    "picture": {
+                        "alt": "Gesa Krause (M.) am Wassergraben",
+                        "copyRight": null,
+                        "src": "img/news/SPORT/sportschau_leichtathletik-dm_in_braunschweig_jetzt_live.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "NDR-Sport",
+                    "title": "Leichtathletik-DM in Braunschweig jetzt live",
+                    "type": "card",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": "Sportschau",
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": {
+                        "id": "news-wirtschaft",
+                        "text": "Wirtschaft"
+                    },
+                    "navigation": {
+                        "external": false,
+                        "href": "/nachrichten/n-tv_bundesregierung_kritisiert_lufthansa_scharf",
+                        "linktext": "Bundesregierung kritisiert Lufthansa scharf",
+                        "tracking": {
+                            "groupName": "Nachrichten",
+                            "groupPosition": 6,
+                            "linkName": "Bundesregierung kritisiert Lufthansa scharf",
+                            "linkPosition": 5
+                        }
+                    },
+                    "date": "2020-08-08T15:40:00+02:00",
+                    "duration": null,
+                    "picture": {
+                        "alt": "Lufthansa droht wegen der zögerlichen Ticketerstattung wohl eine massive Geldstrafe.",
+                        "copyRight": null,
+                        "src": "img/news/NTV/n-tv_bundesregierung_kritisiert_lufthansa_scharf.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Zögerliche Ticket-Erstattung",
+                    "title": "Bundesregierung kritisiert Lufthansa scharf",
+                    "type": "card",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": "n-tv",
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": {
+                        "id": "news-allgemein",
+                        "text": "Allgemein"
+                    },
+                    "navigation": {
+                        "external": false,
+                        "href": "/nachrichten/tagesschau____maskenpflicht_in_teilen_von_paris___",
+                        "linktext": "++ Maskenpflicht in Teilen von Paris ++",
+                        "tracking": {
+                            "groupName": "Nachrichten",
+                            "groupPosition": 6,
+                            "linkName": "++ Maskenpflicht in Teilen von Paris ++",
+                            "linkPosition": 6
+                        }
+                    },
+                    "date": "2020-08-08T18:37:12+02:00",
+                    "duration": null,
+                    "picture": {
+                        "alt": "Menschen mit Masken vor dem Louvre",
+                        "copyRight": null,
+                        "src": "img/news/TAGESSCHAU/tagesschau____maskenpflicht_in_teilen_von_paris___.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Coronavirus-Pandemie",
+                    "title": "++ Maskenpflicht in Teilen von Paris ++",
+                    "type": "card",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": "Tagesschau",
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                }
+            ],
+            "modules": [],
+            "noItemsText": null,
+            "search": null,
+            "reload": null
+        },
+        {
+            "layout": {
+                "background": {
+                    "color": "#d7dce1ff",
+                    "image": null,
+                    "position": null
+                },
+                "theme": null,
+                "screenXS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 59.2
+                },
+                "screenS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 36.5
+                },
+                "screenM": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 26.5
+                },
+                "screenL": {
+                    "type": "grid",
+                    "columns": 4,
+                    "rows": 1,
+                    "maxItems": 4,
+                    "itemSize": null
+                },
+                "screenXL": {
+                    "type": "grid",
+                    "columns": 4,
+                    "rows": 1,
+                    "maxItems": 4,
+                    "itemSize": null
+                }
+            },
+            "title": " <b>Bunte Ablenkung</b> für zwischendurch",
+            "subtitle": "Spiele",
+            "logo": null,
+            "filter": null,
+            "teaserTop": null,
+            "navigation": {
+                "external": false,
+                "href": "/spiele_uebersicht",
+                "linktext": "Weitere Spiele ",
+                "tracking": {
+                    "groupName": "Spiele",
+                    "groupPosition": 7,
+                    "linkName": "Spiele",
+                    "linkPosition": 0
+                }
+            },
+            "groupTitle": null,
+            "cityInfo": null,
+            "dailyTip": null,
+            "items": [
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/spiele_uebersicht/Jungle_run_neu",
+                        "linktext": "Jungle Run",
+                        "tracking": {
+                            "groupName": "Spiele",
+                            "groupPosition": 7,
+                            "linkName": "Jungle Run",
+                            "linkPosition": 1
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Jungle Run",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Spiele/Jungle_Run/Jungle_Run_Spiel_des_Monats.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Jump 'n' Run",
+                    "title": "Jungle Run",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/spiele_uebersicht/geo_quiz_europe_neu",
+                        "linktext": "Geo Quiz Europe",
+                        "tracking": {
+                            "groupName": "Spiele",
+                            "groupPosition": 7,
+                            "linkName": "Geo Quiz Europe",
+                            "linkPosition": 2
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Geo Quiz",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Spiele/Geo_Quiz/Geo_Quiz.data.png",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Quiz",
+                    "title": "Geo Quiz",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/spiele_uebersicht/tower_crash_3d_neu",
+                        "linktext": "Tower Crash 3D",
+                        "tracking": {
+                            "groupName": "Spiele",
+                            "groupPosition": 7,
+                            "linkName": "Tower Crash 3D",
+                            "linkPosition": 3
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Tower Crash 3D",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Spiele/Tower_Crash_3D/Tower_Crash_3D_technisches_Bild.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Schnell & geschickt",
+                    "title": "Tower Crash 3D",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/spiele_uebersicht/solitaire_classic_neu",
+                        "linktext": "Solitaire Classic",
+                        "tracking": {
+                            "groupName": "Spiele",
+                            "groupPosition": 7,
+                            "linkName": "Solitaire Classic",
+                            "linkPosition": 4
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Solitaire Classic",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Spiele/Solitaire/Solitaire_Classic.data.png",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Classics",
+                    "title": "Solitaire Classic",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/spiele_uebersicht/fruita_swipe_2_neu",
+                        "linktext": "Fruita Swipe 2",
+                        "tracking": {
+                            "groupName": "Spiele",
+                            "groupPosition": 7,
+                            "linkName": "Fruita Swipe 2",
+                            "linkPosition": 5
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Fruita Swipe 2",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Spiele/Fruita_Swipe_2/Fruita_Swipe_2_technisches_Bild.data.png",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Match 3",
+                    "title": "Fruita Swipe 2",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/spiele_uebersicht/2048_neu",
+                        "linktext": "2048",
+                        "tracking": {
+                            "groupName": "Spiele",
+                            "groupPosition": 7,
+                            "linkName": "2048",
+                            "linkPosition": 6
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "2048",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Spiele/2048/2048.data.png",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Classics",
+                    "title": "2048",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                }
+            ],
+            "modules": [],
+            "noItemsText": null,
+            "search": null,
+            "reload": null
+        },
+        {
+            "layout": {
+                "background": null,
+                "theme": null,
+                "screenXS": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": null,
+                    "itemSize": null
+                },
+                "screenS": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": null,
+                    "itemSize": null
+                },
+                "screenM": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": null,
+                    "itemSize": null
+                },
+                "screenL": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": null,
+                    "itemSize": null
+                },
+                "screenXL": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": null,
+                    "itemSize": null
+                }
+            },
+            "title": null,
+            "subtitle": null,
+            "logo": null,
+            "filter": null,
+            "teaserTop": null,
+            "navigation": null,
+            "groupTitle": null,
+            "cityInfo": null,
+            "dailyTip": null,
+            "items": [
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": true,
+                        "href": "/documents/31-000000000038/4060-Speisekarte-2020-08_ICE-Portal.pdf",
+                        "linktext": "Speisekarte öffnen",
+                        "tracking": {
+                            "groupName": "Bordgastronomie",
+                            "groupPosition": 8,
+                            "linkName": "Bordgastronomie: Die aktuelle Speisekarte",
+                            "linkPosition": 1
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": null,
+                    "subject": "Unser Team freut sich auf Sie",
+                    "subtitle": "Bordgastronomie",
+                    "title": "<b>Snacks & Getränke</b> gibt es im Bordbistro",
+                    "type": "poster",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": "gradientDark",
+                    "background": {
+                        "color": null,
+                        "image": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/04_Teaser/Bordgastro/02_TB_Fruehstueck_16-5.data.jpg",
+                        "position": "center"
+                    },
+                    "weather": null,
+                    "reload": null
+                }
+            ],
+            "modules": [],
+            "noItemsText": null,
+            "search": null,
+            "reload": null
+        },
+        {
+            "layout": {
+                "background": {
+                    "color": "#f0f3f5ff",
+                    "image": null,
+                    "position": null
+                },
+                "theme": null,
+                "screenXS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 59.2
+                },
+                "screenS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 36.5
+                },
+                "screenM": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 26.5
+                },
+                "screenL": {
+                    "type": "grid",
+                    "columns": 4,
+                    "rows": 1,
+                    "maxItems": 4,
+                    "itemSize": null
+                },
+                "screenXL": {
+                    "type": "grid",
+                    "columns": 4,
+                    "rows": 1,
+                    "maxItems": 4,
+                    "itemSize": null
+                }
+            },
+            "title": "Auf dem Laufenden zum <b>aktuellen Zeitgeschehen</b> ",
+            "subtitle": "Zeitungen & Magazine",
+            "logo": null,
+            "filter": null,
+            "teaserTop": null,
+            "navigation": {
+                "external": false,
+                "href": "/zeitungskiosk",
+                "linktext": "Alle Titel ansehen",
+                "tracking": {
+                    "groupName": "Zeitungen & Magazine",
+                    "groupPosition": 9,
+                    "linkName": "Zeitungen & Magazine",
+                    "linkPosition": 0
+                }
+            },
+            "groupTitle": null,
+            "cityInfo": null,
+            "dailyTip": null,
+            "items": [
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/zeitungskiosk/db_mobil",
+                        "linktext": "DB MOBIL",
+                        "tracking": {
+                            "groupName": "Zeitungen & Magazine",
+                            "groupPosition": 9,
+                            "linkName": "DB MOBIL",
+                            "linkPosition": 1
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Titelseite: DB MOBIL",
+                        "copyRight": null,
+                        "src": "img/magazines/db_mobil/780462_2020_07_03.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 0.75,
+                            "position": "left top"
+                        },
+                        "marker": {
+                            "type": "ribbon",
+                            "text": "Freies Exemplar",
+                            "subline": null
+                        }
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "DB MOBIL",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/zeitungskiosk/geo",
+                        "linktext": "GEO",
+                        "tracking": {
+                            "groupName": "Zeitungen & Magazine",
+                            "groupPosition": 9,
+                            "linkName": "GEO",
+                            "linkPosition": 2
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Titelseite: GEO",
+                        "copyRight": null,
+                        "src": "img/magazines/geo/781684_2020_07_15.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 0.75,
+                            "position": "left top"
+                        },
+                        "marker": {
+                            "type": "ribbon",
+                            "text": "Freies Exemplar",
+                            "subline": null
+                        }
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "GEO",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/zeitungskiosk/p_m__magazin",
+                        "linktext": "P.M. Magazin",
+                        "tracking": {
+                            "groupName": "Zeitungen & Magazine",
+                            "groupPosition": 9,
+                            "linkName": "P.M. Magazin",
+                            "linkPosition": 3
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Titelseite: P.M. Magazin",
+                        "copyRight": null,
+                        "src": "img/magazines/p_m__magazin/783194_2020_07_16.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 0.75,
+                            "position": "left top"
+                        },
+                        "marker": {
+                            "type": "ribbon",
+                            "text": "Freies Exemplar",
+                            "subline": null
+                        }
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "P.M. Magazin",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/zeitungskiosk/couch",
+                        "linktext": "Couch",
+                        "tracking": {
+                            "groupName": "Zeitungen & Magazine",
+                            "groupPosition": 9,
+                            "linkName": "Couch",
+                            "linkPosition": 4
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Titelseite: Couch",
+                        "copyRight": null,
+                        "src": "img/magazines/couch/778540_2020_07_03.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 0.75,
+                            "position": "left top"
+                        },
+                        "marker": {
+                            "type": "ribbon",
+                            "text": "Freies Exemplar",
+                            "subline": null
+                        }
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Couch",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/zeitungskiosk/digital_business_cloud",
+                        "linktext": "Digital Business Cloud",
+                        "tracking": {
+                            "groupName": "Zeitungen & Magazine",
+                            "groupPosition": 9,
+                            "linkName": "Digital Business Cloud",
+                            "linkPosition": 5
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Titelseite: Digital Business Cloud",
+                        "copyRight": null,
+                        "src": "img/magazines/digital_business_cloud/789410_2020_07_30.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 0.75,
+                            "position": "left top"
+                        },
+                        "marker": {
+                            "type": "ribbon",
+                            "text": "Freies Exemplar",
+                            "subline": null
+                        }
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Digital Business Cloud",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/zeitungskiosk/geo_saison",
+                        "linktext": "GEO SAISON",
+                        "tracking": {
+                            "groupName": "Zeitungen & Magazine",
+                            "groupPosition": 9,
+                            "linkName": "GEO SAISON",
+                            "linkPosition": 6
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Titelseite: GEO SAISON",
+                        "copyRight": null,
+                        "src": "img/magazines/geo_saison/geo_saison_2020_06_16.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 0.75,
+                            "position": "left top"
+                        },
+                        "marker": {
+                            "type": "ribbon",
+                            "text": "Freies Exemplar",
+                            "subline": null
+                        }
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "GEO SAISON",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                }
+            ],
+            "modules": [],
+            "noItemsText": null,
+            "search": null,
+            "reload": null
+        },
+        {
+            "layout": {
+                "background": {
+                    "color": "#d7dce1ff",
+                    "image": null,
+                    "position": null
+                },
+                "theme": null,
+                "screenXS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 59.2
+                },
+                "screenS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 36.5
+                },
+                "screenM": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 26.5
+                },
+                "screenL": {
+                    "type": "grid",
+                    "columns": 4,
+                    "rows": 1,
+                    "maxItems": 4,
+                    "itemSize": null
+                },
+                "screenXL": {
+                    "type": "grid",
+                    "columns": 4,
+                    "rows": 1,
+                    "maxItems": 4,
+                    "itemSize": null
+                }
+            },
+            "title": "Packendes <b>Kino</b> im ICE",
+            "subtitle": "Angebot von <img src=\"img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/intro/Maxdome_Intro_Teaser/Joyn_Logo/Poweredby_Bild_SVG_Neu.data.svg\"alt=\"Joyn SELECTION\">",
+            "logo": null,
+            "filter": null,
+            "teaserTop": null,
+            "navigation": {
+                "external": false,
+                "href": "/joyn_uebersicht_",
+                "linktext": "Hier reinschauen",
+                "tracking": {
+                    "groupName": "Filme & Serien",
+                    "groupPosition": 10,
+                    "linkName": "Filme & Serien",
+                    "linkPosition": 0
+                }
+            },
+            "groupTitle": null,
+            "cityInfo": null,
+            "dailyTip": null,
+            "items": [
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": true,
+                        "href": "https://joynselection.de/gratis/filme/Three-Billboards-Outside-Ebbing~2C-Missouri",
+                        "linktext": "**Unser Blockbuster** für deine Reise ",
+                        "tracking": {
+                            "groupName": "Filme & Serien",
+                            "groupPosition": 10,
+                            "linkName": "https://joynselection.de/gratis/filme/Three-Billboards-Outside-Ebbing~2C-Missouri",
+                            "linkPosition": 1
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Bild Maxdome Teaser",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Maxdome/Three_Billboards_outside_of_Ebbing_Missouri/Three_Billbords_outside_of_Ebbing_Missouri_16-5.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 0.66666667,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Drama/Komödie",
+                    "title": "Three Billboards outside Ebbing, Missouri",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": true,
+                        "href": "https://joynselection.de/gratis/filme/Avatar-_-Aufbruch-nach-Pandora",
+                        "linktext": "TW_Avatar_Bild_prev",
+                        "tracking": {
+                            "groupName": "Filme & Serien",
+                            "groupPosition": 10,
+                            "linkName": "https://joynselection.de/gratis/filme/Avatar-_-Aufbruch-nach-Pandora",
+                            "linkPosition": 2
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "TW_Avatar",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Maxdome/Avatar/TW_Avatar.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 0.66666667,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Fantasy/Science-Fiction",
+                    "title": "Avatar",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": true,
+                        "href": "https://joynselection.de/gratis/filme/Sherlock-Holmes",
+                        "linktext": "**Unser Blockbuster** für deine Reise ",
+                        "tracking": {
+                            "groupName": "Filme & Serien",
+                            "groupPosition": 10,
+                            "linkName": "https://joynselection.de/gratis/filme/Sherlock-Holmes",
+                            "linkPosition": 3
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Bild Maxdome Teaser Sherlock Holmes",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Maxdome/Sherlock_Holmes/TW_500_Sherlock_Holmes.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 0.66666667,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Action/Abenteuer",
+                    "title": "Sherlock Holmes",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": true,
+                        "href": "https://joynselection.de/gratis/serien/aus-dem-tagebuch-eines-uber-fahrers",
+                        "linktext": "**Unser Blockbuster** für deine Reise ",
+                        "tracking": {
+                            "groupName": "Filme & Serien",
+                            "groupPosition": 10,
+                            "linkName": "https://joynselection.de/gratis/serien/aus-dem-tagebuch-eines-uber-fahrers",
+                            "linkPosition": 4
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Bild JOYN Teaser",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Maxdome/AUS_DEM_TAGEBUCH_EINES_UBER_FAHRERS/Aus_dem_Leben_eines.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 0.66666667,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Serie",
+                    "title": "Aus dem Tagebuch eines Uber Fahrers",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": true,
+                        "href": "https://joynselection.de/gratis/serien/Dignity",
+                        "linktext": "TW_Dignity_Bild_prev",
+                        "tracking": {
+                            "groupName": "Filme & Serien",
+                            "groupPosition": 10,
+                            "linkName": "https://joynselection.de/gratis/serien/Dignity",
+                            "linkPosition": 5
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Dignity",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Maxdome/Dignity/TW_Dignity.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 0.66666667,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Thriller",
+                    "title": "Dignity",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": true,
+                        "href": "https://joynselection.de/gratis/filme/M~C3~A4nnerherzen",
+                        "linktext": "TW_Maennerherzen_prev",
+                        "tracking": {
+                            "groupName": "Filme & Serien",
+                            "groupPosition": 10,
+                            "linkName": "https://joynselection.de/gratis/filme/M~C3~A4nnerherzen",
+                            "linkPosition": 6
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Männerherzen",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Maxdome/Maennerherzen/TW_Maennerherzen.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 0.66666667,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Komödie ",
+                    "title": "Männerherzen",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                }
+            ],
+            "modules": [],
+            "noItemsText": null,
+            "search": null,
+            "reload": null
+        },
+        {
+            "layout": {
+                "background": null,
+                "theme": null,
+                "screenXS": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 4,
+                    "itemSize": null
+                },
+                "screenS": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 4,
+                    "itemSize": null
+                },
+                "screenM": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 4,
+                    "itemSize": null
+                },
+                "screenL": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 4,
+                    "itemSize": null
+                },
+                "screenXL": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 4,
+                    "itemSize": null
+                }
+            },
+            "title": null,
+            "subtitle": null,
+            "logo": null,
+            "filter": null,
+            "teaserTop": null,
+            "navigation": null,
+            "groupTitle": null,
+            "cityInfo": null,
+            "dailyTip": null,
+            "items": [
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/11_freunde_fussballnews_neu",
+                        "linktext": "Jetzt dribbeln",
+                        "tracking": {
+                            "groupName": "Intro-Teasergruppe",
+                            "groupPosition": 11,
+                            "linkName": "11 FREUNDE Fußball-News",
+                            "linkPosition": 1
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": null,
+                    "subject": "Vom Magazin für Fußballkultur: Alles was auf und neben dem Platz wichtig ist",
+                    "subtitle": null,
+                    "title": "Unsere <b>Fußball-Insights</b> für Sie",
+                    "type": "poster",
+                    "providerHint": null,
+                    "logo": {
+                        "alt": "11 Freunde Logo",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/11_Freunde/Teaser/Neu-11_Freunde_Logo_weiss.data.svg",
+                        "title": null,
+                        "objectFit": null,
+                        "marker": null
+                    },
+                    "provider": null,
+                    "video": null,
+                    "theme": "gradientDark",
+                    "background": {
+                        "color": null,
+                        "image": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/11_Freunde/Teaser/Teaser_Bild_4/Bild_4_16-5.data.jpg",
+                        "position": "right"
+                    },
+                    "weather": null,
+                    "reload": null
+                }
+            ],
+            "modules": [],
+            "noItemsText": null,
+            "search": null,
+            "reload": null
+        },
+        {
+            "layout": {
+                "background": {
+                    "color": "#f0f3f5ff",
+                    "image": null,
+                    "position": null
+                },
+                "theme": null,
+                "screenXS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 59.2
+                },
+                "screenS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 36.5
+                },
+                "screenM": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 26.5
+                },
+                "screenL": {
+                    "type": "grid",
+                    "columns": 4,
+                    "rows": 1,
+                    "maxItems": 4,
+                    "itemSize": null
+                },
+                "screenXL": {
+                    "type": "grid",
+                    "columns": 4,
+                    "rows": 1,
+                    "maxItems": 4,
+                    "itemSize": null
+                }
+            },
+            "title": "Kopfhörer auf und <b>Hörbücher</b> genießen",
+            "subtitle": "Hörbücher",
+            "logo": null,
+            "filter": null,
+            "teaserTop": null,
+            "navigation": {
+                "external": false,
+                "href": "/hoerbuecher",
+                "linktext": "Jetzt reinhören",
+                "tracking": {
+                    "groupName": "Hörbücher",
+                    "groupPosition": 12,
+                    "linkName": "Hörbücher",
+                    "linkPosition": 0
+                }
+            },
+            "groupTitle": null,
+            "cityInfo": null,
+            "dailyTip": null,
+            "items": [
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/hoerbuecher/nuhr_die_box_2",
+                        "linktext": "Nuhr die Box 2",
+                        "tracking": {
+                            "groupName": "Hörbücher",
+                            "groupPosition": 12,
+                            "linkName": "Nuhr die Box 2",
+                            "linkPosition": 1
+                        }
+                    },
+                    "date": null,
+                    "duration": "PT3H45M7S",
+                    "picture": {
+                        "alt": "Nuhr die Box 2",
+                        "copyRight": null,
+                        "src": "img/stones/audiobooks/34-000000000733/4251489300273.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Nuhr die Box 2",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/hoerbuecher/unser_schoenes_deutschland_-_das_land__die_menschen__die_lieder",
+                        "linktext": "Unser schönes Deutschland - Das Land, die Menschen, die Lieder",
+                        "tracking": {
+                            "groupName": "Hörbücher",
+                            "groupPosition": 12,
+                            "linkName": "Unser schönes Deutschland - Das Land, die Menschen, die Lieder",
+                            "linkPosition": 2
+                        }
+                    },
+                    "date": null,
+                    "duration": "PT3H27M31S",
+                    "picture": {
+                        "alt": "Unser schönes Deutschland - Das Land, die Menschen, die Lieder",
+                        "copyRight": null,
+                        "src": "img/stones/audiobooks/34-000000000715/4251625972920.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Unser schönes Deutschland - Das Land, die Menschen, die Lieder",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/hoerbuecher/es_haette_alles_so_schoen_sein_koennen",
+                        "linktext": "Es hätte alles so schön sein können",
+                        "tracking": {
+                            "groupName": "Hörbücher",
+                            "groupPosition": 12,
+                            "linkName": "Es hätte alles so schön sein können",
+                            "linkPosition": 3
+                        }
+                    },
+                    "date": null,
+                    "duration": "PT7H3M44S",
+                    "picture": {
+                        "alt": "Es hätte alles so schön sein können",
+                        "copyRight": null,
+                        "src": "img/stones/audiobooks/34-000000000726/9783732416608.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Es hätte alles so schön sein können",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/hoerbuecher/die_waffeln_einer_frau_-_mit_jan_koeppen",
+                        "linktext": "Die Waffeln einer Frau - mit Jan Köppen",
+                        "tracking": {
+                            "groupName": "Hörbücher",
+                            "groupPosition": 12,
+                            "linkName": "Die Waffeln einer Frau - mit Jan Köppen",
+                            "linkPosition": 4
+                        }
+                    },
+                    "date": null,
+                    "duration": "PT41M50S",
+                    "picture": {
+                        "alt": "Die Waffeln einer Frau - mit Jan Köppen",
+                        "copyRight": null,
+                        "src": "img/stones/audiobooks/55-000000000038/55-000000000038.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Die Waffeln einer Frau - mit Jan Köppen",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/hoerbuecher/englisch_aufbau",
+                        "linktext": "Englisch Aufbau",
+                        "tracking": {
+                            "groupName": "Hörbücher",
+                            "groupPosition": 12,
+                            "linkName": "Englisch Aufbau",
+                            "linkPosition": 5
+                        }
+                    },
+                    "date": null,
+                    "duration": "PT2H31M48S",
+                    "picture": {
+                        "alt": "Englisch Aufbau",
+                        "copyRight": null,
+                        "src": "img/stones/audiobooks/37-000000000002/37-000000000002.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Englisch Aufbau",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/hoerbuecher/das_ritual_des_wassers_-_inspector_ayala_ermittelt__band_2",
+                        "linktext": "Das Ritual des Wassers - Inspector Ayala ermittelt, Band 2",
+                        "tracking": {
+                            "groupName": "Hörbücher",
+                            "groupPosition": 12,
+                            "linkName": "Das Ritual des Wassers - Inspector Ayala ermittelt, Band 2",
+                            "linkPosition": 6
+                        }
+                    },
+                    "date": null,
+                    "duration": "PT11H38M1S",
+                    "picture": {
+                        "alt": "Das Ritual des Wassers - Inspector Ayala ermittelt, Band 2",
+                        "copyRight": null,
+                        "src": "img/stones/audiobooks/34-000000000725/9783732417292.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": null,
+                    "title": "Das Ritual des Wassers - Inspector Ayala ermittelt, Band 2",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                }
+            ],
+            "modules": [],
+            "noItemsText": null,
+            "search": null,
+            "reload": null
+        },
+        {
+            "layout": {
+                "background": {
+                    "color": "#e5ebf3ff",
+                    "image": null,
+                    "position": null
+                },
+                "theme": null,
+                "screenXS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 84
+                },
+                "screenS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 64
+                },
+                "screenM": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 37.3
+                },
+                "screenL": {
+                    "type": "grid",
+                    "columns": 3,
+                    "rows": 1,
+                    "maxItems": 3,
+                    "itemSize": null
+                },
+                "screenXL": {
+                    "type": "grid",
+                    "columns": 3,
+                    "rows": 1,
+                    "maxItems": 3,
+                    "itemSize": null
+                }
+            },
+            "title": "Das Beste aus <b>Job, Food, Fitness</b> und <b>digitaler Welt</b> ",
+            "subtitle": "Trends & Lifestyle",
+            "logo": null,
+            "filter": null,
+            "teaserTop": null,
+            "navigation": {
+                "external": false,
+                "href": "/Trends_und_Lifestyle",
+                "linktext": "Mehr erfahren",
+                "tracking": {
+                    "groupName": "Trends & Lifestyle",
+                    "groupPosition": 13,
+                    "linkName": "Trends & Lifestyle",
+                    "linkPosition": 0
+                }
+            },
+            "groupTitle": null,
+            "cityInfo": null,
+            "dailyTip": null,
+            "items": [
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/tw_trends_und_lifestyle/abenteuer-vor-der-haustuer",
+                        "linktext": "Abenteuer vor der Haustür",
+                        "tracking": {
+                            "groupName": "Trends & Lifestyle",
+                            "groupPosition": 13,
+                            "linkName": "Abenteuer vor der Haustür",
+                            "linkPosition": 1
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Abenteuer vor der Haustür",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Trends_und_Lifestyle/Freizeit_und_Fitness/Abenteuer_vor_der_Haustuer/Abenteuer_vor_der_Haustuer_TB.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Freizeit & Fitness",
+                    "title": "Raus aus dem Büro und rein ins Abenteuer",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/tw_trends_und_lifestyle/stand_up_paddling",
+                        "linktext": "Stand-up-Paddling: Rein in die Fluten!",
+                        "tracking": {
+                            "groupName": "Trends & Lifestyle",
+                            "groupPosition": 13,
+                            "linkName": "Stand-up-Paddling: Rein in die Fluten!",
+                            "linkPosition": 2
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Stand-Up-Paddling",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Reisen_und_Entdecken/03_Abenteuer/Stand-Up-Paddling/Stand-Up-Paddling_Bild.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Freizeit & Fitness",
+                    "title": "Stand-up-Paddling: Rein in die Fluten!",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/tw_trends_und_lifestyle/die_besten_apps_fuer_den_sommer",
+                        "linktext": "Die besten Apps für den Sommer",
+                        "tracking": {
+                            "groupName": "Trends & Lifestyle",
+                            "groupPosition": 13,
+                            "linkName": "Die besten Apps für den Sommer",
+                            "linkPosition": 3
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Die besten Apps für den Sommer",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Trends_und_Lifestyle/Digitale-Welt/Die_besten_Apps_fuer_den_Sommer/GettyImages-738815225.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Digitale Welt",
+                    "title": "Die besten Apps für den Sommer",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/tw_trends_und_lifestyle/acht_ungewoehnliche_arbeitsplaetze",
+                        "linktext": "Acht ungewöhnliche Arbeitsplätze abseits von Homeoffice und Büro",
+                        "tracking": {
+                            "groupName": "Trends & Lifestyle",
+                            "groupPosition": 13,
+                            "linkName": "Acht ungewöhnliche Arbeitsplätze abseits von Homeoffice und Büro",
+                            "linkPosition": 4
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "ungewöhnliche Arbeitsplätze ",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Trends_und_Lifestyle/Job_und_Karriere/ungewoehnliche_Arbeitsplaetze/0059729267h_TB.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Job & Karriere",
+                    "title": "Acht ungewöhnliche Arbeitsplätze abseits von Homeoffice und Büro",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/tw_trends_und_lifestyle/angeberwissen_superfood",
+                        "linktext": "Angeberwissen Superfood",
+                        "tracking": {
+                            "groupName": "Trends & Lifestyle",
+                            "groupPosition": 13,
+                            "linkName": "Angeberwissen Superfood",
+                            "linkPosition": 5
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "exotisches Superfood",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Trends_und_Lifestyle/Essen_und_Trinken/Angeberwissen_Superfood/Angeberwissen_Superfood.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Essen & Trinken",
+                    "title": "Die besten regionalen Alternativen zu Superfood",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/tw_trends_und_lifestyle/entdecker_unserer_zeit",
+                        "linktext": "Entdecker unserer Zeit",
+                        "tracking": {
+                            "groupName": "Trends & Lifestyle",
+                            "groupPosition": 13,
+                            "linkName": "Entdecker unserer Zeit",
+                            "linkPosition": 6
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Entdecker unserer Zeit",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Trends_und_Lifestyle/Job_und_Karriere/Entdecker_unserer_Zeit/Entdecker_unserer_Zeit_TB_20190227_MOSAiC_Preparation.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Job & Karriere",
+                    "title": "Entdecker unserer Zeit",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                }
+            ],
+            "modules": [],
+            "noItemsText": null,
+            "search": null,
+            "reload": null
+        },
+        {
+            "layout": {
+                "background": null,
+                "theme": null,
+                "screenXS": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": null,
+                    "itemSize": null
+                },
+                "screenS": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": null,
+                    "itemSize": null
+                },
+                "screenM": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": null,
+                    "itemSize": null
+                },
+                "screenL": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": null,
+                    "itemSize": null
+                },
+                "screenXL": {
+                    "type": "carousel",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": null,
+                    "itemSize": null
+                }
+            },
+            "title": null,
+            "subtitle": null,
+            "logo": null,
+            "filter": null,
+            "teaserTop": null,
+            "navigation": null,
+            "groupTitle": null,
+            "cityInfo": null,
+            "dailyTip": null,
+            "items": [
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": true,
+                        "href": "https://www.iqsn.de/L1/cawi/DB_Feedback_19/1_1_1/DE.php?ZugNr=ICE592&klasse=2&quelle=Teaser ICE Portal",
+                        "linktext": "Feedback geben",
+                        "tracking": {
+                            "groupName": "Feedback",
+                            "groupPosition": 14,
+                            "linkName": "https://www.iqsn.de/L1/cawi/DB_Feedback_19/1_1_1/DE.php?ZugNr=ICE592&klasse=2&quelle=Teaser ICE Portal",
+                            "linkPosition": 1
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": null,
+                    "subject": "Sagen Sie uns bitte, wie Sie Ihre bisherige Reise mit uns finden",
+                    "subtitle": "Kundenfeedback",
+                    "title": "Helfen Sie uns  <b>besser</b> zu werden",
+                    "type": "poster",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": "gradientDark",
+                    "background": {
+                        "color": null,
+                        "image": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/04_Teaser/Feedback/TB_Feedback.data.jpg",
+                        "position": "right"
+                    },
+                    "weather": null,
+                    "reload": null
+                }
+            ],
+            "modules": [],
+            "noItemsText": null,
+            "search": null,
+            "reload": null
+        },
+        {
+            "layout": {
+                "background": {
+                    "color": "#f0f3f5ff",
+                    "image": null,
+                    "position": null
+                },
+                "theme": null,
+                "screenXS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 84
+                },
+                "screenS": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 64
+                },
+                "screenM": {
+                    "type": "swipe",
+                    "columns": null,
+                    "rows": null,
+                    "maxItems": 6,
+                    "itemSize": 37.3
+                },
+                "screenL": {
+                    "type": "grid",
+                    "columns": 3,
+                    "rows": 1,
+                    "maxItems": 3,
+                    "itemSize": null
+                },
+                "screenXL": {
+                    "type": "grid",
+                    "columns": 3,
+                    "rows": 1,
+                    "maxItems": 3,
+                    "itemSize": null
+                }
+            },
+            "title": "<b>Hits für Kids</b>: Mit Volldampf gegen Langeweile",
+            "subtitle": "Kinderwelt",
+            "logo": null,
+            "filter": null,
+            "teaserTop": null,
+            "navigation": {
+                "external": false,
+                "href": "/kinderwelt",
+                "linktext": "Klick dich rein",
+                "tracking": {
+                    "groupName": "Kinderwelt",
+                    "groupPosition": 15,
+                    "linkName": "Kinderwelt",
+                    "linkPosition": 0
+                }
+            },
+            "groupTitle": null,
+            "cityInfo": null,
+            "dailyTip": null,
+            "items": [
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/kinderwelt/neues/leselok_minilok-03-2020",
+                        "linktext": "Doppeltes Leseabenteuer ab sofort an Bord ",
+                        "tracking": {
+                            "groupName": "Kinderwelt",
+                            "groupPosition": 15,
+                            "linkName": "Doppeltes Leseabenteuer ab sofort an Bord ",
+                            "linkPosition": 1
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Neue Magazine 3-2020:  LeseLOK & miniLOK",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Kinderwelt/Neues_Wissen__Mitmachen/Unser_Services/LeseLok_MiniLok_3.0/200727_Magazine_im_Zug_TE.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Wissen für Kids",
+                    "title": "Doppeltes Leseabenteuer ab sofort an Bord ",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/kinderwelt/elternseite/Die-drei-Ausrufezeichen-Stadt-Land-Zug",
+                        "linktext": "Die drei !!! Stadt - Land - Zug",
+                        "tracking": {
+                            "groupName": "Kinderwelt",
+                            "groupPosition": 15,
+                            "linkName": "Die drei !!! Stadt - Land - Zug",
+                            "linkPosition": 2
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Die drei !!!, Stadt - Land - Zug: Auf Verbrecherjagd quer durch Deutschland",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Kinderwelt/Elterninfos__Vorlesegeschichten/Vorlesegeschichten_3.0/DDA_Stadt-Land-Zug/DB_TEASER_ICEP_Kosmos-DDA_TE_16-5.data.png",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Vorlesegeschichten",
+                    "title": "Die drei !!!, Stadt - Land - Zug",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/kinderwelt/neues/Malwettbewerb-Buehne-frei-fuer-kleine-Kuenstler",
+                        "linktext": "Bühne frei für kleine Künstler",
+                        "tracking": {
+                            "groupName": "Kinderwelt",
+                            "groupPosition": 15,
+                            "linkName": "Bühne frei für kleine Künstler",
+                            "linkPosition": 3
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Malwettbewerb: Bühne frei für kleine Künstler",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Kinderwelt/Neues_Wissen__Mitmachen/Mitmachen_3.0/Malwettbewerb_KiFa/DB_TEASER_ICEP_Malwettbewerb_KiFa_16-5.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Gewinnspiel",
+                    "title": "Bühne frei für kleine Künstler",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/kinderwelt/lesespass/der_kleine_ice_und_die_mutprobe",
+                        "linktext": "Die Mutprobe",
+                        "tracking": {
+                            "groupName": "Kinderwelt",
+                            "groupPosition": 15,
+                            "linkName": "Die Mutprobe",
+                            "linkPosition": 4
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Mutprobe",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Kinderwelt/Comics._Witze._Idas_Reiseblog/Comics_3.0/07_Die_Mutprobe/Mutprobe_Teaserbild_t_16-5.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Comics",
+                    "title": "Die Mutprobe",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/kinderwelt/neues/Super-coole-Technik-bei-der-Bahn",
+                        "linktext": "Super coole Technik bei der Bahn",
+                        "tracking": {
+                            "groupName": "Kinderwelt",
+                            "groupPosition": 15,
+                            "linkName": "Super coole Technik bei der Bahn",
+                            "linkPosition": 5
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Super coole Technik bei der Bahn",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Startseite_3.0/Kinderwelt/Neues_Wissen__Mitmachen/Wissen_fuer_Kids_3.0/Super_coole_Technik/Coole-Technik-TE-ICEP-1200-675_16-5.data.png",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Bahn-Entdecker",
+                    "title": "Super coole Technik bei der Bahn",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                },
+                {
+                    "filterIds": [],
+                    "category": null,
+                    "navigation": {
+                        "external": false,
+                        "href": "/kinderwelt/kindervideos/cs_Robbi_Regio_Vorstellung",
+                        "linktext": "Robbi Regio stellt sich vor",
+                        "tracking": {
+                            "groupName": "Kinderwelt",
+                            "groupPosition": 15,
+                            "linkName": "Robbi Regio stellt sich vor",
+                            "linkPosition": 6
+                        }
+                    },
+                    "date": null,
+                    "duration": null,
+                    "picture": {
+                        "alt": "Vorstellung: Robbi Regio ",
+                        "copyRight": null,
+                        "src": "img/grains/Sites/ICE-Portal/Germany/de/Release_2.0/Kinderwelt/Videos/Castingshow/Robbi_Regio_Teaserbild.data.jpg",
+                        "title": null,
+                        "objectFit": {
+                            "aspectRatio": 1.77777778,
+                            "position": "left top"
+                        },
+                        "marker": null
+                    },
+                    "subject": null,
+                    "subtitle": "Video",
+                    "title": "Kennst du schon Robbi Regio?",
+                    "type": "simple",
+                    "providerHint": null,
+                    "logo": null,
+                    "provider": null,
+                    "video": null,
+                    "theme": null,
+                    "background": null,
+                    "weather": null,
+                    "reload": null
+                }
+            ],
+            "modules": [],
+            "noItemsText": null,
+            "search": null,
+            "reload": null
+        }
+    ]
+}
